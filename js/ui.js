@@ -55,6 +55,15 @@
     ).join("");
   }
 
+  function mobileNavHtml(active) {
+    const items = NAV_LINKS.map(
+      (l) => `<a href="${l.href}" class="${l.key === active ? "active" : ""}"><span>${l.label}</span>${I.chevron}</a>`
+    ).join("");
+    return items +
+      `<a href="compte.html"><span>Mon compte</span>${I.chevron}</a>` +
+      `<a href="panier.html"><span>Panier <span class="mobile-nav__badge" id="cart-count-mobile">0</span></span>${I.chevron}</a>`;
+  }
+
   async function mountHeader(active) {
     const el = document.getElementById("site-header");
     if (!el) return;
@@ -80,7 +89,7 @@
             </form>
             <a href="compte.html" class="icon-btn" aria-label="Mon compte">${I.user}</a>
             <a href="panier.html" class="icon-btn" aria-label="Panier">${I.bag}<span class="cart-badge" id="cart-badge" hidden>0</span></a>
-            <button class="icon-btn menu-toggle" id="menu-toggle" aria-label="Menu">${I.menu}</button>
+            <button class="icon-btn menu-toggle" id="menu-toggle" aria-label="Menu"><span class="burger"><span></span><span></span><span></span></span></button>
           </div>
         </div>
       </header>
@@ -91,7 +100,7 @@
             <img src="assets/logo.png" alt="SN Collection">
             <button class="mobile-nav__close" id="mobile-nav-close" aria-label="Fermer">${I.close}</button>
           </div>
-          <nav>${navHtml(active)}<a href="compte.html">Mon compte ${I.chevron}</a><a href="panier.html">Panier (<span id="cart-count-mobile">0</span>) ${I.chevron}</a></nav>
+          <nav>${mobileNavHtml(active)}</nav>
           <div class="mobile-nav__social">
             ${settings.facebook ? `<a href="${settings.facebook}" aria-label="Facebook" target="_blank" rel="noopener">${I.facebook}</a>` : ""}
             ${settings.instagram ? `<a href="${settings.instagram}" aria-label="Instagram" target="_blank" rel="noopener">${I.instagram}</a>` : ""}
@@ -108,8 +117,8 @@
     const toggle = document.getElementById("menu-toggle");
     const closeBtn = document.getElementById("mobile-nav-close");
     const panel = document.getElementById("mobile-nav");
-    const openMenu = () => { panel.classList.add("open"); document.body.style.overflow = "hidden"; };
-    const closeMenu = () => { panel.classList.remove("open"); document.body.style.overflow = ""; };
+    const openMenu = () => { panel.classList.add("open"); toggle && toggle.classList.add("is-open"); document.body.style.overflow = "hidden"; };
+    const closeMenu = () => { panel.classList.remove("open"); toggle && toggle.classList.remove("is-open"); document.body.style.overflow = ""; };
     toggle && toggle.addEventListener("click", openMenu);
     closeBtn && closeBtn.addEventListener("click", closeMenu);
     panel && panel.querySelector(".mobile-nav__overlay").addEventListener("click", closeMenu);
@@ -207,6 +216,36 @@
     let t;
     return (...args) => { clearTimeout(t); t = setTimeout(() => fn(...args), ms); };
   }
+
+  /* ---------- Animations d'apparition au défilement ---------- */
+  const REVEAL_SELECTOR = ".product-card, .cat-card, .blog-card, .value-card, .timeline-item, .section-head, .contact-info-card, .cart-summary";
+  const revealIO = "IntersectionObserver" in global ? new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        revealIO.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: "0px 0px -30px 0px" }) : null;
+
+  function observeReveal(root) {
+    if (!revealIO) return;
+    const nodes = root.matches && root.matches(REVEAL_SELECTOR) ? [root] : [...root.querySelectorAll(REVEAL_SELECTOR)];
+    nodes.forEach((el, i) => {
+      if (el.dataset.revealInit) return;
+      el.dataset.revealInit = "1";
+      el.classList.add("reveal");
+      el.style.transitionDelay = Math.min(i % 8, 8) * 0.06 + "s";
+      revealIO.observe(el);
+    });
+  }
+
+  if (global.MutationObserver) {
+    new MutationObserver((mutations) => {
+      mutations.forEach((m) => m.addedNodes.forEach((n) => { if (n.nodeType === 1) observeReveal(n); }));
+    }).observe(document.documentElement, { childList: true, subtree: true });
+  }
+  document.addEventListener("DOMContentLoaded", () => observeReveal(document.body));
 
   global.SNUI = {
     formatPrice, renderStars, placeholderBlock, productMedia, escapeHtml, qs,
