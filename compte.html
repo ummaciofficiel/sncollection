@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mon compte — SN Collection</title>
+<link rel="icon" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="compte">
+
+<div id="site-header"></div>
+
+<main>
+  <div class="container section">
+    <div class="auth-card">
+      <div class="auth-tabs">
+        <button class="is-active" id="tab-login">Connexion</button>
+        <button id="tab-register">Créer un compte</button>
+      </div>
+
+      <form id="form-login" class="form-grid">
+        <div class="field"><label>E-mail ou téléphone</label><input type="text" required></div>
+        <div class="field"><label>Mot de passe</label><input type="password" required></div>
+        <button type="submit" class="btn btn-primary btn-block">Se connecter</button>
+        <p class="form-note text-center">Pas encore de compte ? <a href="#" id="link-register" style="color:var(--maroon); text-decoration:underline;">Créer un compte</a></p>
+      </form>
+
+      <form id="form-register" class="form-grid" style="display:none;">
+        <div class="field"><label>Nom complet</label><input type="text" required></div>
+        <div class="field"><label>Téléphone</label><input type="tel" required></div>
+        <div class="field"><label>E-mail (optionnel)</label><input type="email"></div>
+        <div class="field"><label>Mot de passe</label><input type="password" required></div>
+        <button type="submit" class="btn btn-primary btn-block">Créer mon compte</button>
+        <p class="form-note text-center">Déjà cliente ? <a href="#" id="link-login" style="color:var(--maroon); text-decoration:underline;">Se connecter</a></p>
+      </form>
+
+      <div class="form-success" id="auth-success">Votre espace client sera bientôt disponible. En attendant, contactez-nous directement pour toute question sur vos commandes. 🌸</div>
+    </div>
+  </div>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/icons.js"></script>
+<script src="js/data.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/ui.js"></script>
+<script>
+  SNUI.mountHeader(""); SNUI.mountFooter();
+  const loginForm = document.getElementById("form-login");
+  const registerForm = document.getElementById("form-register");
+  const tabLogin = document.getElementById("tab-login");
+  const tabRegister = document.getElementById("tab-register");
+  function showLogin(){ loginForm.style.display=""; registerForm.style.display="none"; tabLogin.classList.add("is-active"); tabRegister.classList.remove("is-active"); }
+  function showRegister(){ loginForm.style.display="none"; registerForm.style.display=""; tabRegister.classList.add("is-active"); tabLogin.classList.remove("is-active"); }
+  tabLogin.addEventListener("click", showLogin);
+  tabRegister.addEventListener("click", showRegister);
+  document.getElementById("link-register").addEventListener("click", (e)=>{e.preventDefault(); showRegister();});
+  document.getElementById("link-login").addEventListener("click", (e)=>{e.preventDefault(); showLogin();});
+  [loginForm, registerForm].forEach(f => f.addEventListener("submit", (e)=>{
+    e.preventDefault();
+    document.getElementById("auth-success").classList.add("show");
+  }));
+</script>
+</body>
+</html>

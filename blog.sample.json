@@ -1,0 +1,29 @@
+[
+  {
+    "id": "comment-porter-le-wax",
+    "titre": "Comment porter le wax au quotidien",
+    "image": "assets/products/robe-imprime-moutarde.jpg",
+    "extrait": "Nos conseils pour intégrer le wax dans votre garde-robe de tous les jours, sans faire trop habillé.",
+    "contenu": "Le wax n'est plus réservé aux grandes cérémonies. Associé à des basiques neutres comme un jean brut ou un pantalon noir, un haut wax devient une pièce facile à porter au bureau comme le week-end. Pensez aux accessoires dorés pour rehausser une tenue simple, et n'hésitez pas à mélanger deux imprimés de la même famille de couleurs pour un effet moderne et assumé.",
+    "date": "2026-03-02",
+    "auteur": "SN Collection"
+  },
+  {
+    "id": "entretien-tissu-wax",
+    "titre": "Bien entretenir vos tissus wax",
+    "image": "assets/products/robe-wax-orange.jpg",
+    "extrait": "Lavage, séchage, repassage : les bons gestes pour préserver l'éclat de vos imprimés le plus longtemps possible.",
+    "contenu": "Le wax est un tissu résistant, mais il mérite quelques précautions pour garder ses couleurs vives. Lavez-le à froid ou à 30°C, à l'envers, et évitez l'essorage puissant. Séchez-le à l'ombre plutôt qu'en plein soleil pour éviter que les couleurs ne passent, et repassez-le également à l'envers, sur une température moyenne.",
+    "date": "2026-02-18",
+    "auteur": "SN Collection"
+  },
+  {
+    "id": "tendances-saison",
+    "titre": "Les tendances de la saison",
+    "image": "assets/products/robe-fleurie-bordeaux.jpg",
+    "extrait": "Manches ballon, tailles marquées, imprimés floraux : ce qui fait le style de la saison chez SN Collection.",
+    "contenu": "Cette saison, on retrouve beaucoup de manches ballon et de tailles cintrées avec des nœuds ou des ceintures. Les imprimés floraux sur fond bordeaux et moutarde dominent les nouvelles collections, souvent associés à des accessoires dorés pour un rendu chic et affirmé.",
+    "date": "2026-01-25",
+    "auteur": "SN Collection"
+  }
+]

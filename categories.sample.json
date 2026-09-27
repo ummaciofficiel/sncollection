@@ -1,0 +1,10 @@
+[
+  { "nom": "Robes", "slug": "robes", "image": "assets/products/robe-fleurie-bordeaux.jpg", "description": "Robes en wax pour toutes les occasions" },
+  { "nom": "Pantalons & Jupes", "slug": "pantalons-jupes", "image": "", "description": "Pantalons larges, jupes crayon et jupes plissées" },
+  { "nom": "Ensembles", "slug": "ensembles", "image": "", "description": "Ensembles coordonnés 2 et 3 pièces" },
+  { "nom": "Accessoires", "slug": "accessoires", "image": "", "description": "Sacs, bijoux et petites touches finales" },
+  { "nom": "Hijabs & Voiles", "slug": "hijabs-voiles", "image": "", "description": "Hijabs premium en soie et coton" },
+  { "nom": "Épingles & Bijoux", "slug": "epingles-bijoux", "image": "", "description": "Bijoux fantaisie et épingles dorées" },
+  { "nom": "Sacs & Chaussures", "slug": "sacs-chaussures", "image": "", "description": "Sacs à main et chaussures assorties" },
+  { "nom": "Nouvelle collection", "slug": "nouvelle-collection", "image": "assets/products/robe-wax-orange.jpg", "description": "Les toutes dernières arrivées" }
+]

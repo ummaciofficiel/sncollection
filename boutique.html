@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Boutique — SN Collection</title>
+<meta name="description" content="Toute la boutique SN Collection : robes, ensembles, hijabs, accessoires en wax authentique.">
+<link rel="icon" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="boutique">
+
+<div id="site-header"></div>
+
+<main>
+  <div class="container">
+    <nav class="breadcrumb"><a href="index.html">Accueil</a><span class="sep">/</span><span class="current">Boutique</span></nav>
+    <div class="page-hero">
+      <h1>Boutique</h1>
+      <p>Des robes pour toutes les occasions : élégance, confort et style.</p>
+    </div>
+  </div>
+
+  <div class="container section-tight">
+    <div class="shop-layout">
+      <aside class="filters" id="filters">
+        <h4>Catégories</h4>
+        <div class="filter-group" id="filter-categories"></div>
+
+        <h4>Prix</h4>
+        <div class="price-range">
+          <span id="price-min-label">0</span>
+          <input type="range" id="price-range" min="0" max="100000" step="1000" value="100000">
+          <span id="price-max-label">100 000</span>
+        </div>
+
+        <h4>Taille</h4>
+        <div class="filter-group" id="filter-sizes"></div>
+
+        <a href="boutique.html" class="filters-reset">Réinitialiser les filtres</a>
+      </aside>
+
+      <div>
+        <div class="shop-toolbar">
+          <span class="count" id="result-count">Chargement…</span>
+          <div class="controls">
+            <button class="btn btn-outline btn-sm mobile-filter-btn" id="mobile-filter-btn">Filtrer</button>
+            <select id="sort-select">
+              <option value="pertinence">Trier : Plus récents</option>
+              <option value="prix-asc">Prix croissant</option>
+              <option value="prix-desc">Prix décroissant</option>
+              <option value="note">Meilleures notes</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="product-grid" id="product-grid"></div>
+        <div class="pagination" id="pagination"></div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/icons.js"></script>
+<script src="js/data.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/pages/boutique.js"></script>
+</body>
+</html>

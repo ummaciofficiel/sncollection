@@ -1,0 +1,15 @@
+[
+  { "cle": "hero_titre", "valeur": "SN Collection" },
+  { "cle": "hero_sous_titre", "valeur": "Votre style, notre signature" },
+  { "cle": "hero_texte", "valeur": "Découvrez notre collection de vêtements, accessoires et bien plus, pour toutes les femmes qui veulent allier élégance, confort et authenticité." },
+  { "cle": "banniere_titre", "valeur": "Élégante aujourd'hui, unique toujours." },
+  { "cle": "banniere_texte", "valeur": "Chaque saison, une nouvelle histoire de style à raconter." },
+  { "cle": "telephone", "valeur": "+225 00 00 00 00 00" },
+  { "cle": "whatsapp", "valeur": "2250000000000" },
+  { "cle": "email", "valeur": "contact@sncollection.ci" },
+  { "cle": "adresse", "valeur": "Abidjan, Côte d'Ivoire" },
+  { "cle": "facebook", "valeur": "" },
+  { "cle": "instagram", "valeur": "" },
+  { "cle": "tiktok", "valeur": "" },
+  { "cle": "youtube", "valeur": "" }
+]

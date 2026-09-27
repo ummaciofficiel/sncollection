@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contact — SN Collection</title>
+<meta name="description" content="Contactez SN Collection par téléphone, WhatsApp, e-mail ou via notre formulaire.">
+<link rel="icon" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="contact">
+
+<div id="site-header"></div>
+
+<main>
+  <div class="container">
+    <nav class="breadcrumb"><a href="index.html">Accueil</a><span class="sep">/</span><span class="current">Contact</span></nav>
+    <div class="page-hero">
+      <h1>Contactez-nous</h1>
+      <p>Une question sur un article, une commande ou une livraison ? Écrivez-nous.</p>
+    </div>
+  </div>
+
+  <div class="container section-tight">
+    <div class="contact-layout">
+      <div class="contact-info-card" id="contact-info">
+        <h3>Nos coordonnées</h3>
+      </div>
+
+      <div>
+        <form id="contact-form" class="form-grid">
+          <div class="form-grid two-col">
+            <div class="field"><label>Nom complet</label><input type="text" required placeholder="Votre nom"></div>
+            <div class="field"><label>Téléphone</label><input type="tel" required placeholder="Ex : 07 00 00 00 00"></div>
+          </div>
+          <div class="field"><label>E-mail (optionnel)</label><input type="email" placeholder="vous@exemple.com"></div>
+          <div class="field"><label>Sujet</label>
+            <select>
+              <option>Question sur un produit</option>
+              <option>Suivi de commande</option>
+              <option>Retour / échange</option>
+              <option>Autre demande</option>
+            </select>
+          </div>
+          <div class="field"><label>Message</label><textarea required placeholder="Votre message..."></textarea></div>
+          <button type="submit" class="btn btn-primary">Envoyer le message</button>
+          <div class="form-success" id="contact-success">Merci ! Votre message a bien été envoyé, nous vous répondrons rapidement. 🌸</div>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/icons.js"></script>
+<script src="js/data.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/pages/contact.js"></script>
+</body>
+</html>

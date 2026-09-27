@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SN Collection — Votre style, notre signature</title>
+<meta name="description" content="SN Collection : vêtements, accessoires et hijabs en wax authentique. Livraison en Côte d'Ivoire, paiement à la livraison.">
+<link rel="icon" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="accueil">
+
+<div id="site-header"></div>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero-slider" id="hero-slider">
+    <!-- Les slides sont injectées par home.js -->
+  </section>
+
+  <!-- PERKS -->
+  <div class="container">
+    <div class="perks">
+      <div class="perk"><span class="perk__icon" id="icon-truck"></span><span><strong>Livraison rapide</strong><span>en Côte d'Ivoire</span></span></div>
+      <div class="perk"><span class="perk__icon" id="icon-cash"></span><span><strong>Paiement à la livraison</strong><span>en toute confiance</span></span></div>
+      <div class="perk"><span class="perk__icon" id="icon-rotate"></span><span><strong>Retours faciles</strong><span>sous 7 jours</span></span></div>
+      <div class="perk"><span class="perk__icon" id="icon-headset"></span><span><strong>Service client</strong><span>disponible 7j/7</span></span></div>
+    </div>
+  </div>
+
+  <!-- CATEGORIES -->
+  <section class="section bg-cream">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Explorer</p>
+        <h2>Nos catégories</h2>
+        <p>Explorez nos univers et trouvez votre coup de cœur.</p>
+      </div>
+      <div class="cat-grid" id="category-grid"></div>
+    </div>
+  </section>
+
+  <!-- BANNIERE PROMO -->
+  <section class="promo-banner" id="promo-banner">
+    <div class="promo-banner__scrim"></div>
+    <div class="container">
+      <div class="promo-banner__content">
+        <h2 id="promo-title">Élégante aujourd'hui, unique toujours.</h2>
+        <p id="promo-text">Chaque saison, une nouvelle histoire de style à raconter.</p>
+        <a href="boutique.html" class="btn btn-light">Voir la collection</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEST SELLERS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Coups de cœur</p>
+        <h2>Nos collections en vedette</h2>
+        <p>Les pièces les plus aimées par nos clientes.</p>
+      </div>
+      <div class="product-grid" id="featured-grid"></div>
+      <div class="section-foot-link"><a href="boutique.html" class="btn btn-outline">Découvrir toute la boutique</a></div>
+    </div>
+  </section>
+
+  <!-- NOUVEAUTES -->
+  <section class="section bg-rose">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Fraîchement arrivé</p>
+        <h2>Nouvelle collection</h2>
+        <p>Les toutes dernières pièces à découvrir en premier.</p>
+      </div>
+      <div class="product-grid" id="new-grid"></div>
+    </div>
+  </section>
+
+  <!-- AVIS / REASSURANCE -->
+  <section class="section text-center">
+    <div class="container">
+      <div class="section-head center">
+        <p class="eyebrow">Elles nous font confiance</p>
+        <h2>Ce qu'en disent nos clientes</h2>
+      </div>
+      <div class="values-grid" id="testimonials-grid"></div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter">
+    <div class="container">
+      <div>
+        <h3>Restez connectée !</h3>
+        <p>Recevez nos nouveautés, offres exclusives et conseils mode. Sans spam, promis.</p>
+      </div>
+      <form id="newsletter-form">
+        <input type="email" required placeholder="Votre adresse e-mail" aria-label="Votre adresse e-mail">
+        <button type="submit" class="btn btn-light">S'inscrire</button>
+        <div class="form-msg" id="newsletter-msg" hidden>Merci ! Vous êtes bien inscrite. 🌸</div>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<div id="site-footer"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/icons.js"></script>
+<script src="js/data.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/pages/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+[
+  { "nom": "Collection Wax", "image": "assets/products/robe-fleurie-bordeaux.jpg", "description": "Les couleurs tendance de la saison : imprimés wax authentiques dans des coupes actuelles.", "lien_categorie": "Robes" },
+  { "nom": "Collection Élégance", "image": "assets/products/robe-wax-orange.jpg", "description": "Des silhouettes structurées et raffinées pour les occasions qui comptent.", "lien_categorie": "Robes" },
+  { "nom": "Collection Casual", "image": "assets/products/robe-imprime-moutarde.jpg", "description": "Confort et style au quotidien, à associer facilement.", "lien_categorie": "Ensembles" },
+  { "nom": "Collection Hijabs", "image": "", "description": "Des voiles premium dans des matières douces et fluides.", "lien_categorie": "Hijabs & Voiles" }
+]

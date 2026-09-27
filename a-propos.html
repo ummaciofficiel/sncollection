@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>À propos — SN Collection</title>
+<meta name="description" content="Découvrez l'histoire, les valeurs et l'engagement de SN Collection.">
+<link rel="icon" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="apropos">
+
+<div id="site-header"></div>
+
+<main>
+  <section class="about-hero" style="background-image:url('assets/hero-2.jpg');">
+    <div class="about-hero__scrim"></div>
+    <div class="container about-hero__content">
+      <nav class="breadcrumb" style="color:rgba(255,255,255,.8); padding-bottom:6px;"><a href="index.html" style="color:#fff;">Accueil</a><span class="sep">/</span><span class="current" style="color:#fff;">À propos</span></nav>
+      <h1>Notre histoire</h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" style="max-width:760px;">
+      <p class="eyebrow">Depuis nos débuts</p>
+      <h2>La mode n'est pas seulement un vêtement, c'est une attitude.</h2>
+      <p>SN Collection est née d'une passion pour le tissu wax et l'envie de proposer aux femmes ivoiriennes des pièces qui allient authenticité, élégance et confort au quotidien. Chaque modèle est pensé pour sublimer toutes les silhouettes, dans des imprimés choisis avec soin auprès de nos partenaires textiles.</p>
+      <p>Ce que nous voulons, c'est que chaque cliente se sente unique en portant nos créations — que ce soit pour un événement important ou pour une journée ordinaire transformée en occasion de briller.</p>
+    </div>
+  </section>
+
+  <section class="section bg-cream">
+    <div class="container">
+      <div class="section-head center">
+        <p class="eyebrow">Nos valeurs</p>
+        <h2>Ce qui nous anime</h2>
+      </div>
+      <div class="values-grid" id="values-grid">
+        <div class="value-card">
+          <div class="value-card__icon" data-icon="heart"></div>
+          <h3 style="font-size:1.1rem;">Authenticité</h3>
+          <p>Des tissus wax sélectionnés pour leur qualité et leur origine, sans compromis.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-card__icon" data-icon="star"></div>
+          <h3 style="font-size:1.1rem;">Élégance accessible</h3>
+          <p>Des créations soignées, pensées pour un usage réel, à des prix justes.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-card__icon" data-icon="checkCircle"></div>
+          <h3 style="font-size:1.1rem;">Confiance</h3>
+          <p>Paiement à la livraison, retours faciles et un service client toujours à l'écoute.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" style="max-width:700px;">
+      <div class="section-head center">
+        <p class="eyebrow">Notre parcours</p>
+        <h2>Quelques étapes clés</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <span class="year">2022</span><span class="dot"></span>
+          <div><strong>Les débuts</strong><p>Premières créations vendues directement à Abidjan, autour d'un petit atelier de couture.</p></div>
+        </div>
+        <div class="timeline-item">
+          <span class="year">2024</span><span class="dot"></span>
+          <div><strong>Ouverture de la boutique en ligne</strong><p>SN Collection s'ouvre à toute la Côte d'Ivoire grâce à la livraison à domicile.</p></div>
+        </div>
+        <div class="timeline-item">
+          <span class="year">2026</span><span class="dot"></span>
+          <div><strong>Nouvelle collection élargie</strong><p>Robes, ensembles, hijabs et accessoires : une gamme complète pensée pour toutes les femmes.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="promo-banner" style="background-image:url('assets/hero-1.jpg');">
+    <div class="promo-banner__scrim"></div>
+    <div class="container">
+      <div class="promo-banner__content">
+        <h2>Envie de découvrir nos créations ?</h2>
+        <p>Parcourez la boutique et trouvez la pièce qui vous ressemble.</p>
+        <a href="boutique.html" class="btn btn-light">Découvrir la boutique</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/icons.js"></script>
+<script src="js/data.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/ui.js"></script>
+<script>
+  SNUI.mountHeader("apropos");
+  SNUI.mountFooter();
+  document.querySelectorAll("#values-grid [data-icon]").forEach(el => { el.innerHTML = ICONS[el.dataset.icon] || ""; });
+</script>
+</body>
+</html>
