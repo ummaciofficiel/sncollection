@@ -189,7 +189,10 @@
           <div class="footer-bottom">
             <span>© ${year} SN Collection. Tous droits réservés.</span>
             <div class="payment-icons">
-              <span>VISA</span><span>MC</span><span>OM</span><span>MTN MoMo</span>
+              <img src="assets/payments/orange-money.png" alt="Orange Money">
+              <img src="assets/payments/wave.png" alt="Wave">
+              <img src="assets/payments/djamo.png" alt="Djamo">
+              <span class="cash-chip">${I.cash} Espèces à la livraison</span>
             </div>
           </div>
         </div>

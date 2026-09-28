@@ -157,8 +157,9 @@
     hero_texte: "Découvrez notre collection de vêtements, accessoires et bien plus, pour toutes les femmes qui veulent allier élégance, confort et authenticité.",
     banniere_titre: "Élégante aujourd'hui, unique toujours.",
     banniere_texte: "Chaque saison, une nouvelle histoire de style à raconter.",
-    telephone: "+225 00 00 00 00 00",
+    telephone: "+225 07 14 55 56 31",
     whatsapp: CFG.WHATSAPP || "",
+    moyens_paiement: "Orange Money, Wave, Djamo, Espèces à la livraison",
     email: "contact@sncollection.ci",
     adresse: "Abidjan, Côte d'Ivoire",
     facebook: "", instagram: "", tiktok: "", youtube: ""

@@ -35,5 +35,5 @@ window.SITE_CONFIG = {
   CURRENCY: "F CFA",
 
   // Numéro WhatsApp pour le bouton de contact rapide (indicatif inclus, sans "+" ni espaces)
-  WHATSAPP: "2250000000000"
+  WHATSAPP: "2250714555631"
 };
