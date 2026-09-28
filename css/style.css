@@ -233,13 +233,10 @@ p{ line-height:1.65; color: var(--grey); margin:0 0 1em; }
 .hero-slider{ position:relative; overflow:hidden; background: var(--rose-pale); min-height:480px; }
 .hero-slide{
   position:absolute; inset:0; min-height: 480px;
-  background-size: cover; background-position: center;
+  background-size: cover; background-position: center; background-repeat:no-repeat;
   opacity:0; visibility:hidden; transition: opacity 1s ease;
-  animation: heroZoom 9s ease-in-out infinite alternate;
 }
 .hero-slide.is-active{ opacity:1; visibility:visible; position:relative; z-index:1; }
-@keyframes heroZoom{ from{ background-size:100%; } to{ background-size:112%; } }
-@media (prefers-reduced-motion: reduce){ .hero-slide{ animation:none; } }
 .hero-slide__scrim{ position:absolute; inset:0; background: linear-gradient(90deg, rgba(253,248,244,.94) 0%, rgba(253,248,244,.55) 42%, rgba(253,248,244,0) 62%); }
 .hero-slide__content{
   position:relative; max-width: var(--container); margin:0 auto; padding: 90px 24px;
