@@ -15,7 +15,7 @@
 
 window.SITE_CONFIG = {
   // Exemple : "1A2b3C4d5E6f7G8h9I0jKlmnopqrstuvwxyz1234567"
-  SHEET_ID: "",
+  SHEET_ID: "https://docs.google.com/spreadsheets/d/1_6fmTPEUTvnQrQnPo7Lzwa3QDk62dr-OEgss-nX0RlU/edit?usp=sharing",
 
   // Noms des onglets de votre Google Sheet (ne changez que si vous avez
   // renommé les onglets dans votre propre classeur).
